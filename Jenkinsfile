@@ -6,13 +6,13 @@ pipeline {
         PROJECT_NAME = 'JenkinsPipelineDemo'
     }
 
-    stages {
-        stage('Clone Repo') {
-            steps {
-                echo 'Cloning the repository...'
-                git 'https://github.com/Seajal-S/jenkins-pipeline-demo.git'
-            }
-        }
+    stage('Clone Repo') {
+    steps {
+        echo 'Cloning the repository...'
+        git branch: 'main', url: 'https://github.com/Seajal-S/jenkins-pipeline-demo.git'
+    }
+}
+
 
         stage('Run Shell Script') {
             steps {
