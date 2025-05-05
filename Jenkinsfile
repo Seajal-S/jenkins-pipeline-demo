@@ -6,7 +6,7 @@ pipeline {
         PROJECT_NAME = 'JenkinsPipelineDemo'
     }
 
-    stages { // Corrected: 'stages' block should wrap all stages
+    stages {
         stage('Clone Repo') {
             steps {
                 echo 'Cloning the repository...'
